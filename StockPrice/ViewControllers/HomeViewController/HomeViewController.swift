@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var stocksTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDelegates()
     }
     
     private func setDelegates() {
