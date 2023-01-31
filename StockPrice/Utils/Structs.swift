@@ -21,3 +21,20 @@ enum Storyboard: String {
 enum CellIdentifier: String {
     case stockData = "stock_cell"
 }
+
+enum Ticker: String {
+    /// Google
+    case Google = "GOOGL"
+    /// Meta
+    case Meta = "META"
+    /// Apple
+    case Apple = "AAPL"
+    /// Tesla
+    case Tesla = "TSLA"
+    /// Amazon
+    case Amazon = "AMZN"
+    /// Lloyds bank
+    case Lloyds = "LYG"
+    /// Coca Cola
+    case Coke = "KO"
+}
