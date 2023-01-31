@@ -13,4 +13,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    private func setDelegates() {
+        stocksTableView.delegate = self
+        stocksTableView.dataSource = self
+    }
 }
