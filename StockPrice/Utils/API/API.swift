@@ -23,6 +23,32 @@ class FinnHub {
             }
         }
         
+        func getQuote(symbol: String, completion: @escaping (Result<Quote, Error>) -> Void) {
+            request(endpoint: "/quote?symbol=\(symbol)&token=\(token)") { data in
+                switch data {
+                case .success(let data):
+                    do {
+                        let result = try JSONSerialization.jsonObject(with: data) as? [String: Any] ?? [:]
+                        let quote = Quote(
+                            currentPrice: result[QuoteResponse.currentPrice.rawValue] as? Double ?? 0,
+                            change: result[QuoteResponse.change.rawValue] as? Double ?? 0,
+                            percentChange: result[QuoteResponse.percentChange.rawValue] as? Double ?? 0,
+                            highPrice: result[QuoteResponse.highPrice.rawValue] as? Double ?? 0,
+                            lowPrice: result[QuoteResponse.lowPrice.rawValue] as? Double ?? 0,
+                            openPrice: result[QuoteResponse.openPrice.rawValue] as? Double ?? 0,
+                            previousClosePrice: result[QuoteResponse.previousClosePrice.rawValue] as? Double ?? 0
+                        )
+                        completion(.success(quote))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        }
+
+        
         func retrieveCompanyData(symbol: Ticker, completion: @escaping (Result<Company, Error>) -> Void) {
             request(endpoint: "/stock/profile2?symbol=\(symbol.rawValue)&token=\(token)") { result in
                 switch result {
