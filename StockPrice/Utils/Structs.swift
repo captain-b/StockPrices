@@ -13,3 +13,7 @@ enum Font: String {
 enum NibIdentifier: String {
     case stockTableViewCell = "StockTableViewCell"
 }
+
+enum Storyboard: String {
+    case main = "Main"
+}

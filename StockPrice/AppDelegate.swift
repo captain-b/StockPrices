@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyBoard = UIStoryboard(name: Storyboard.main.rawValue, bundle: Bundle.main)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         window?.rootViewController = (storyBoard.instantiateViewController(withIdentifier: "home") as? HomeViewController)!
