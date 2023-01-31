@@ -25,5 +25,6 @@ class HomeViewController: UIViewController {
         stocksTableView.delegate = self
         stocksTableView.dataSource = self
         stocksTableView.register(UINib(nibName: NibIdentifier.stockTableViewCell.rawValue, bundle: nil), forCellReuseIdentifier: CellIdentifier.stockData.rawValue)
+        socket.delegate = self
     }
 }
