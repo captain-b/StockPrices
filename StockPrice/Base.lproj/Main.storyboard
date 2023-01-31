@@ -61,26 +61,26 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42C-jS-Bsv">
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-tL-fWh">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-tL-fWh" customClass="CompanyLogoImageView" customModule="StockPrice" customModuleProvider="target">
                                         <rect key="frame" x="146.66666666666666" y="20" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="tww-0E-6Qf"/>
                                             <constraint firstAttribute="height" constant="100" id="xsw-7O-Cj9"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-AL-zbx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-AL-zbx" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
                                         <rect key="frame" x="20" y="150" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIF-CH-PQ2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIF-CH-PQ2" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
                                         <rect key="frame" x="20" y="191" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-Yi-1nd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-Yi-1nd" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
                                         <rect key="frame" x="20" y="232" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -90,6 +90,9 @@
                                         <rect key="frame" x="40" y="273" width="313" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="d0k-Pw-EG5" eventType="touchUpInside" id="i7Z-pZ-y41"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -121,6 +124,12 @@
                             <constraint firstItem="5DO-EE-zcf" firstAttribute="bottom" secondItem="42C-jS-Bsv" secondAttribute="bottom" id="ymp-dn-1br"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="companyIndustryLabel" destination="gIF-CH-PQ2" id="Gbk-3B-bwT"/>
+                        <outlet property="companyLogoImageView" destination="HCh-tL-fWh" id="eYs-fq-hJp"/>
+                        <outlet property="companyNameLabel" destination="GxN-AL-zbx" id="nmi-58-nDA"/>
+                        <outlet property="companyPriceLabel" destination="b1O-Yi-1nd" id="LOK-nb-BzY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceo-0d-VIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
