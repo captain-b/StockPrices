@@ -88,3 +88,10 @@ class FinnHub {
         
     }
 }
+
+
+protocol FinnHubSocketDelegate: AnyObject {
+    func disconnected(data: String)
+    func websocket(error: Error?)
+    func websocket(updated: LastPriceDataSubscription)
+}
