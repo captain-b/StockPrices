@@ -13,4 +13,8 @@ class CompanyInfoViewController: UIViewController {
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var companyLogoImageView: UIImageView!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
