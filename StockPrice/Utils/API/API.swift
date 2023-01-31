@@ -84,7 +84,7 @@ class FinnHub {
         }
     }
     
-    class Socket {
+    class Socket: WebSocketDelegate {
         
     }
 }
