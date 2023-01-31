@@ -63,3 +63,13 @@ struct Quote {
     var openPrice = Double()
     var previousClosePrice = Double()
 }
+
+enum QuoteResponse: String {
+    case currentPrice = "c"
+    case change = "d"
+    case percentChange = "dp"
+    case highPrice = "h"
+    case lowPrice = "l"
+    case openPrice = "o"
+    case previousClosePrice = "pc"
+}
