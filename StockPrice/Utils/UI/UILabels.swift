@@ -19,3 +19,18 @@ class BlackBoldLabel: UILabel {
         textColor = .black
     }
 }
+
+class GrayDescriptionLabel: UILabel {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setStyles()
+    }
+    
+    private func setStyles() {
+        font = UIFont(name: Font.PTSansRegular.rawValue, size: font.pointSize)
+        adjustsFontSizeToFitWidth = true
+        textColor = .gray
+        numberOfLines = 0
+    }
+}
+

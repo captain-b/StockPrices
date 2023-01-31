@@ -7,6 +7,7 @@
 
 enum Font: String {
     case PTSansBold = "PTSans-Bold"
+    case PTSansRegular = "PTSans-Regular"
 }
 
 enum NibIdentifier: String {
