@@ -9,7 +9,9 @@ import UIKit
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        let sectionTitles = Array(tableViewCompanyData.keys)
+        let industry = sectionTitles[section]
+        return tableViewCompanyData[industry]?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
