@@ -5,6 +5,10 @@
 //  Created by Babak Rezai on 31/01/2023.
 //
 
+enum Font: String {
+    case PTSansBold = "PTSans-Bold"
+}
+
 enum NibIdentifier: String {
     case stockTableViewCell = "StockTableViewCell"
 }
