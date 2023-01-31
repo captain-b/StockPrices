@@ -14,6 +14,9 @@
 		1DF15E59298938D700CD1095 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E58298938D700CD1095 /* HomeViewController.swift */; };
 		1DF15E5B29893C5B00CD1095 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E5A29893C5B00CD1095 /* UITableView.swift */; };
 		1DF15E5E29893D2000CD1095 /* CompanyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E5D29893D2000CD1095 /* CompanyInfoViewController.swift */; };
+		1DF15E612989408700CD1095 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E602989408700CD1095 /* Structs.swift */; };
+		1DF15E642989416F00CD1095 /* StockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E632989416F00CD1095 /* StockTableViewCell.xib */; };
+		1DF15E67298941B900CD1095 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E66298941B900CD1095 /* StockTableViewCell.swift */; };
 		5F2755F73362B2DA78D648D2 /* Pods_StockPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF64917EBD6CB024F9B6A13F /* Pods_StockPrice.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		1DF15E58298938D700CD1095 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1DF15E5A29893C5B00CD1095 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		1DF15E5D29893D2000CD1095 /* CompanyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoViewController.swift; sourceTree = "<group>"; };
+		1DF15E602989408700CD1095 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		1DF15E632989416F00CD1095 /* StockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockTableViewCell.xib; sourceTree = "<group>"; };
+		1DF15E66298941B900CD1095 /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 		6EB6F265E4D2FF6ADD914B86 /* Pods-StockPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPrice.debug.xcconfig"; path = "Target Support Files/Pods-StockPrice/Pods-StockPrice.debug.xcconfig"; sourceTree = "<group>"; };
 		D8F30536F773E49DB49E7701 /* Pods-StockPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPrice.release.xcconfig"; path = "Target Support Files/Pods-StockPrice/Pods-StockPrice.release.xcconfig"; sourceTree = "<group>"; };
 		EF64917EBD6CB024F9B6A13F /* Pods_StockPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +71,8 @@
 		1DF15E412989365600CD1095 /* StockPrice */ = {
 			isa = PBXGroup;
 			children = (
+				1DF15E622989412600CD1095 /* Nibs */,
+				1DF15E5F2989407C00CD1095 /* Utils */,
 				1DF15E56298938B000CD1095 /* ViewControllers */,
 				1DF15E422989365600CD1095 /* AppDelegate.swift */,
 				1DF15E482989365600CD1095 /* Main.storyboard */,
@@ -99,6 +107,31 @@
 				1DF15E5D29893D2000CD1095 /* CompanyInfoViewController.swift */,
 			);
 			path = CompanyInfoViewController;
+			sourceTree = "<group>";
+		};
+		1DF15E5F2989407C00CD1095 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1DF15E65298941A700CD1095 /* UI */,
+				1DF15E602989408700CD1095 /* Structs.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1DF15E622989412600CD1095 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				1DF15E632989416F00CD1095 /* StockTableViewCell.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		1DF15E65298941A700CD1095 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1DF15E66298941B900CD1095 /* StockTableViewCell.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		D6E678D3532E490A28DA98A5 /* Pods */ = {
@@ -180,6 +213,7 @@
 			files = (
 				1DF15E4F2989365700CD1095 /* LaunchScreen.storyboard in Resources */,
 				1DF15E4C2989365700CD1095 /* Assets.xcassets in Resources */,
+				1DF15E642989416F00CD1095 /* StockTableViewCell.xib in Resources */,
 				1DF15E4A2989365600CD1095 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +269,9 @@
 			files = (
 				1DF15E5E29893D2000CD1095 /* CompanyInfoViewController.swift in Sources */,
 				1DF15E432989365600CD1095 /* AppDelegate.swift in Sources */,
+				1DF15E612989408700CD1095 /* Structs.swift in Sources */,
 				1DF15E59298938D700CD1095 /* HomeViewController.swift in Sources */,
+				1DF15E67298941B900CD1095 /* StockTableViewCell.swift in Sources */,
 				1DF15E5B29893C5B00CD1095 /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
