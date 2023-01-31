@@ -17,3 +17,7 @@ enum NibIdentifier: String {
 enum Storyboard: String {
     case main = "Main"
 }
+
+enum CellIdentifier: String {
+    case stockData = "stock_cell"
+}
