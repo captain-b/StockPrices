@@ -53,3 +53,13 @@ enum Ticker: String {
     /// Coca Cola
     case Coke = "KO"
 }
+
+struct Quote {
+    var currentPrice = Double()
+    var change = Double()
+    var percentChange = Double()
+    var highPrice = Double()
+    var lowPrice = Double()
+    var openPrice = Double()
+    var previousClosePrice = Double()
+}
