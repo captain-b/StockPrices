@@ -8,7 +8,7 @@
 import Foundation
 
 extension HomeViewController {
-    func findCompanyData() {
+    internal func findCompanyData() {
         var companyArray = [Company]()
         self.companies.forEach { symbol in
             self.api.retrieveCompanyData(symbol: symbol) { result in
@@ -25,7 +25,7 @@ extension HomeViewController {
         }
     }
     
-    func filterCompanies(_companies: [Company]) {
+    internal func filterCompanies(_companies: [Company]) {
         for company in _companies {
             if tableViewCompanyData[company.finnhubIndustry ?? ""] == nil {
                 tableViewCompanyData[company.finnhubIndustry ?? ""] = [company]
