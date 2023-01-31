@@ -8,6 +8,8 @@
 import UIKit
 
 class CompanyInfoViewController: UIViewController {
+    var company = Company()
+    
     @IBOutlet weak var companyPriceLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyIndustryLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyNameLabel: GrayDescriptionLabel!
@@ -20,5 +22,12 @@ class CompanyInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLabels()
+    }
+    
+    func setLabels() {
+        companyNameLabel.text = "Name: \(company.name!) (\(company.ticker!))"
+        companyIndustryLabel.text = "Industry: \(company.finnhubIndustry!)"
+        companyLogoImageView.image = getStockImage(ticker: company.ticker!)
     }
 }
