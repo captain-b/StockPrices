@@ -85,3 +85,17 @@ struct LastPriceData {
     var timestamp = Int64()
     var volume = Double()
 }
+
+enum LastPriceDataResponse: String {
+    case type = "type"
+    case data = "data"
+}
+
+enum LastPriceResponse: String {
+    case symbol = "s"
+    case lastPrice = "p"
+    case timestamp = "t"
+    case volume = "v"
+}
+
+
