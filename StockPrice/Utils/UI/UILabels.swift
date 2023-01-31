@@ -33,4 +33,3 @@ class GrayDescriptionLabel: UILabel {
         numberOfLines = 0
     }
 }
-

@@ -18,4 +18,3 @@ class CompanyLogoImageView: UIImageView {
         clipsToBounds = true
     }
 }
-
