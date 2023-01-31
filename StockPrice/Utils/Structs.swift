@@ -73,3 +73,9 @@ enum QuoteResponse: String {
     case openPrice = "o"
     case previousClosePrice = "pc"
 }
+
+struct LastPriceDataSubscription {
+    var type = String()
+    var data = [LastPriceData]()
+}
+
