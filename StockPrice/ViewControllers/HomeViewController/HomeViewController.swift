@@ -24,5 +24,6 @@ class HomeViewController: UIViewController {
     private func setDelegates() {
         stocksTableView.delegate = self
         stocksTableView.dataSource = self
+        stocksTableView.register(UINib(nibName: NibIdentifier.stockTableViewCell.rawValue, bundle: nil), forCellReuseIdentifier: CellIdentifier.stockData.rawValue)
     }
 }
