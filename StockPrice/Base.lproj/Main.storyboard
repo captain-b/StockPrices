@@ -61,11 +61,55 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42C-jS-Bsv">
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-tL-fWh">
-                                        <rect key="frame" x="76" y="60" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-tL-fWh">
+                                        <rect key="frame" x="146.66666666666666" y="20" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="tww-0E-6Qf"/>
+                                            <constraint firstAttribute="height" constant="100" id="xsw-7O-Cj9"/>
+                                        </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-AL-zbx">
+                                        <rect key="frame" x="20" y="150" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIF-CH-PQ2">
+                                        <rect key="frame" x="20" y="191" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-Yi-1nd">
+                                        <rect key="frame" x="20" y="232" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFv-N4-taj">
+                                        <rect key="frame" x="40" y="273" width="313" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="b1O-Yi-1nd" firstAttribute="trailing" secondItem="gIF-CH-PQ2" secondAttribute="trailing" id="2wH-BT-fTm"/>
+                                    <constraint firstItem="GxN-AL-zbx" firstAttribute="top" secondItem="HCh-tL-fWh" secondAttribute="bottom" constant="30" id="4DM-2I-KGU"/>
+                                    <constraint firstItem="TFv-N4-taj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b1O-Yi-1nd" secondAttribute="bottom" priority="750" constant="20" id="8Xp-tl-tPM"/>
+                                    <constraint firstItem="gIF-CH-PQ2" firstAttribute="top" secondItem="GxN-AL-zbx" secondAttribute="bottom" constant="20" id="GcZ-0F-8ui"/>
+                                    <constraint firstItem="gIF-CH-PQ2" firstAttribute="leading" secondItem="GxN-AL-zbx" secondAttribute="leading" id="KBe-14-Nsd"/>
+                                    <constraint firstItem="TFv-N4-taj" firstAttribute="leading" secondItem="42C-jS-Bsv" secondAttribute="leading" constant="40" id="LL8-7j-XCO"/>
+                                    <constraint firstItem="GxN-AL-zbx" firstAttribute="leading" secondItem="42C-jS-Bsv" secondAttribute="leading" constant="20" id="NgC-fs-ABK"/>
+                                    <constraint firstAttribute="trailing" secondItem="GxN-AL-zbx" secondAttribute="trailing" constant="20" id="SJm-BG-KlZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="TFv-N4-taj" secondAttribute="trailing" constant="40" id="SPo-sv-PWd"/>
+                                    <constraint firstItem="b1O-Yi-1nd" firstAttribute="top" secondItem="gIF-CH-PQ2" secondAttribute="bottom" constant="20" id="Ubx-kB-p7E"/>
+                                    <constraint firstItem="HCh-tL-fWh" firstAttribute="top" secondItem="42C-jS-Bsv" secondAttribute="top" constant="20" id="W4P-SH-esS"/>
+                                    <constraint firstItem="HCh-tL-fWh" firstAttribute="centerX" secondItem="42C-jS-Bsv" secondAttribute="centerX" id="YEQ-tQ-WuR"/>
+                                    <constraint firstItem="TFv-N4-taj" firstAttribute="centerX" secondItem="42C-jS-Bsv" secondAttribute="centerX" id="dE2-QO-olC"/>
+                                    <constraint firstItem="gIF-CH-PQ2" firstAttribute="trailing" secondItem="GxN-AL-zbx" secondAttribute="trailing" id="gRE-xg-o1M"/>
+                                    <constraint firstItem="b1O-Yi-1nd" firstAttribute="leading" secondItem="gIF-CH-PQ2" secondAttribute="leading" id="gZz-79-dAO"/>
+                                    <constraint firstAttribute="bottom" secondItem="TFv-N4-taj" secondAttribute="bottom" constant="10" id="rin-OA-NAp"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5DO-EE-zcf"/>
@@ -80,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceo-0d-VIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="1"/>
+            <point key="canvasLocation" x="948.85496183206101" y="0.70422535211267612"/>
         </scene>
     </scenes>
     <resources>
