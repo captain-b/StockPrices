@@ -20,7 +20,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = (storyBoard.instantiateViewController(withIdentifier: "home") as? HomeViewController)!
         return true
     }
-
-
 }
 
