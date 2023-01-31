@@ -161,6 +161,11 @@ class FinnHub {
     }
 }
 
+public func getStockImage(ticker: String) -> UIImage {
+    return UIImage(named: ticker) ?? UIImage(named: "company")!
+}
+
+
 
 protocol FinnHubSocketDelegate: AnyObject {
     func disconnected(data: String)
