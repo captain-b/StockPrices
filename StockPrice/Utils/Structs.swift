@@ -79,3 +79,9 @@ struct LastPriceDataSubscription {
     var data = [LastPriceData]()
 }
 
+struct LastPriceData {
+    var symbol = String()
+    var lastPrice = Double()
+    var timestamp = Int64()
+    var volume = Double()
+}
