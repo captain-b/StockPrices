@@ -13,6 +13,7 @@
 		1DF15E4F2989365700CD1095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E4D2989365700CD1095 /* LaunchScreen.storyboard */; };
 		1DF15E59298938D700CD1095 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E58298938D700CD1095 /* HomeViewController.swift */; };
 		1DF15E5B29893C5B00CD1095 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E5A29893C5B00CD1095 /* UITableView.swift */; };
+		1DF15E5E29893D2000CD1095 /* CompanyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E5D29893D2000CD1095 /* CompanyInfoViewController.swift */; };
 		5F2755F73362B2DA78D648D2 /* Pods_StockPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF64917EBD6CB024F9B6A13F /* Pods_StockPrice.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		1DF15E502989365700CD1095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DF15E58298938D700CD1095 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1DF15E5A29893C5B00CD1095 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		1DF15E5D29893D2000CD1095 /* CompanyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoViewController.swift; sourceTree = "<group>"; };
 		6EB6F265E4D2FF6ADD914B86 /* Pods-StockPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPrice.debug.xcconfig"; path = "Target Support Files/Pods-StockPrice/Pods-StockPrice.debug.xcconfig"; sourceTree = "<group>"; };
 		D8F30536F773E49DB49E7701 /* Pods-StockPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPrice.release.xcconfig"; path = "Target Support Files/Pods-StockPrice/Pods-StockPrice.release.xcconfig"; sourceTree = "<group>"; };
 		EF64917EBD6CB024F9B6A13F /* Pods_StockPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 		1DF15E56298938B000CD1095 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1DF15E5C29893D0A00CD1095 /* CompanyInfoViewController */,
 				1DF15E57298938BB00CD1095 /* HomeViewController */,
 			);
 			path = ViewControllers;
@@ -88,6 +91,14 @@
 				1DF15E5A29893C5B00CD1095 /* UITableView.swift */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		1DF15E5C29893D0A00CD1095 /* CompanyInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1DF15E5D29893D2000CD1095 /* CompanyInfoViewController.swift */,
+			);
+			path = CompanyInfoViewController;
 			sourceTree = "<group>";
 		};
 		D6E678D3532E490A28DA98A5 /* Pods */ = {
@@ -222,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF15E5E29893D2000CD1095 /* CompanyInfoViewController.swift in Sources */,
 				1DF15E432989365600CD1095 /* AppDelegate.swift in Sources */,
 				1DF15E59298938D700CD1095 /* HomeViewController.swift in Sources */,
 				1DF15E5B29893C5B00CD1095 /* UITableView.swift in Sources */,
