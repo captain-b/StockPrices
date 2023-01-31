@@ -8,6 +8,11 @@
 import UIKit
 
 class StockTableViewCell: UITableViewCell {
+    @IBOutlet weak var stockImage: CompanyLogoImageView!
+    @IBOutlet weak var stockPriceLabel: BlackBoldLabel!
+    @IBOutlet weak var stockCompanyNameLabel: GrayDescriptionLabel!
+    @IBOutlet weak var stockTickerLabel: BlackBoldLabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
