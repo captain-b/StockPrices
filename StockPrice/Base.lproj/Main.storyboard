@@ -43,6 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="stocksTableView" destination="tyX-iT-RkD" id="z9y-Mi-xyQ"/>
+                        <segue destination="d0k-Pw-EG5" kind="presentation" id="KQX-mL-QYb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,7 +55,7 @@
             <objects>
                 <viewController id="d0k-Pw-EG5" customClass="CompanyInfoViewController" customModule="StockPrice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gKY-5d-BKj">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="5DO-EE-zcf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
