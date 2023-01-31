@@ -12,6 +12,20 @@ class FinnHub {
         fileprivate let token = "cf93lraad3i9ljn7d4c0cf93lraad3i9ljn7d4cg"
         fileprivate let url = "https://finnhub.io/api/v1"
         
+        func retrieveCompanyData(symbol: Ticker, completion: @escaping (Result<Company, Error>) -> Void) {
+            request(endpoint: "/stock/profile2?symbol=\(symbol.rawValue)&token=\(token)") { result in
+                switch result {
+                case .success(let data):
+                    do {
+                        completion(.success(try JSONDecoder().decode(Company.self, from: data)))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        }
         
         fileprivate func request(endpoint: String, completion: @escaping (Result<Data, Error>) -> Void) {
             let endpoint = url + endpoint
