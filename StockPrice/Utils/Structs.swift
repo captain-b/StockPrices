@@ -58,7 +58,7 @@ enum Ticker: String {
     case Coke = "KO"
 }
 
-struct Quote {
+struct Quote: Encodable {
     var currentPrice = Double()
     var change = Double()
     var percentChange = Double()
