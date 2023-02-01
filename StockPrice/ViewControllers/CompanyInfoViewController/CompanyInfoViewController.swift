@@ -41,6 +41,6 @@ class CompanyInfoViewController: UIViewController {
         companyPhoneLabel.text = "Phone: \(company.phone ?? naString)"
         companyWebsiteLabel.text = "Website: \(company.weburl ?? naString)"
         companyOutsandingSharesLabel.text = "Outsanding sharess: \(company.shareOutstanding ?? 0)"
-        companyCountryLabel.text = "Country: \(company.country)"
+        companyCountryLabel.text = "Country: \(company.country ?? naString)"
     }
 }
