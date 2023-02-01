@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Displays a popup alert to the user
 public func displayMessage(vc: UIViewController, message: String) {
     DispatchQueue.main.async {
         let alertController = UIAlertController(title: "Message", message: message, preferredStyle: .alert)

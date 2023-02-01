@@ -26,6 +26,10 @@ enum SegueIdentifier: String {
     case details = "details"
 }
 
+enum ViewControllerIdentifier: String {
+    case home = "home"
+}
+
 struct Company: Codable {
     var country: String?
     var currency: String?

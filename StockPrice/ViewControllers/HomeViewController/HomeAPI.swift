@@ -8,6 +8,7 @@
 import Foundation
 
 extension HomeViewController {
+    /// Finds the stored company stock data from previous sessions, filters them by their industry category and then calls for real time company info.
     internal func findStoredCompanyData() {
         let storedData = LocalDataStore.retrieveLocalData(forKey: .stockList)
         if (storedData.length != nil) {
@@ -21,6 +22,7 @@ extension HomeViewController {
         retrieveCompanyData()
     }
     
+    /// Retrieves the company data from the API and filters them based on their industry.
     internal func retrieveCompanyData() {
         tableViewCompanyData = [:]
         var companyArray = [Company]()
@@ -46,6 +48,7 @@ extension HomeViewController {
         }
     }
     
+    /// Filters an array of company and categorises them based on their industry.
     internal func filterCompanies(_companies: [Company]) {
         for company in _companies {
             if tableViewCompanyData[company.finnhubIndustry ?? ""] == nil {
@@ -57,6 +60,7 @@ extension HomeViewController {
         DispatchQueue.main.async {
             self.stocksTableView.reloadData()
         }
+        // Subscribe to receive live price notifications.
         scanPrices()
     }
 }

@@ -8,9 +8,13 @@
 import Foundation
 import Starscream
 
+// API class for interacting with FinnHub API
 class FinnHub {
+    // Makes API requests to the server.
     class API {
+        // API token for accessing FinnHub API
         fileprivate let token = "cf93lraad3i9ljn7d4c0cf93lraad3i9ljn7d4cg"
+        // Base URL for FinnHub API
         fileprivate let url = "https://finnhub.io/api/v1"
         
         func getQuote(symbol: Ticker, completion: @escaping (Result<Quote, Error>) -> Void) {
@@ -24,6 +28,7 @@ class FinnHub {
             }
         }
         
+        // Retrieves quote for a given symbol string, completion is called with result of quote or error
         func getQuote(symbol: String, completion: @escaping (Result<Quote, Error>) -> Void) {
             request(endpoint: "/quote?symbol=\(symbol)&token=\(token)") { data in
                 switch data {
@@ -49,7 +54,7 @@ class FinnHub {
             }
         }
 
-        
+        // Retrieves company data for a given symbol, completion is called with result of company data or error
         func retrieveCompanyData(symbol: Ticker, completion: @escaping (Result<Company, Error>) -> Void) {
             request(endpoint: "/stock/profile2?symbol=\(symbol.rawValue)&token=\(token)") { result in
                 switch result {
@@ -65,6 +70,7 @@ class FinnHub {
             }
         }
         
+        // Constructs the request and sends it to the API.
         fileprivate func request(endpoint: String, completion: @escaping (Result<Data, Error>) -> Void) {
             let endpoint = url + endpoint
             guard let url = URL(string: endpoint) else {
@@ -85,18 +91,22 @@ class FinnHub {
         }
     }
     
+    // Handles socket connections to the server.
     class Socket: WebSocketDelegate {
+        // An array of Tickers
         private var _tickers = [Ticker]()
         private let socket = WebSocket(request: URLRequest(url: URL(string: "wss://ws.finnhub.io?token=cf93lraad3i9ljn7d4c0cf93lraad3i9ljn7d4cg")!))
         
         weak var delegate: FinnHubSocketDelegate?
         
+        // Subscribes to an array of Tickers to get changes.
         func subscribe(tickers: [Ticker]) {
             _tickers = tickers
             socket.delegate = self
             socket.connect()
         }
         
+        /// Handles the event when a message is received from our subscription.
         func didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocket) {
             switch event {
             case .connected(_):

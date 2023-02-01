@@ -13,11 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Initialise our main view controller.
         let storyBoard = UIStoryboard(name: Storyboard.main.rawValue, bundle: Bundle.main)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = (storyBoard.instantiateViewController(withIdentifier: "home") as? HomeViewController)!
+        // Set the home vc as our landing page.
+        window?.rootViewController = (storyBoard.instantiateViewController(withIdentifier: ViewControllerIdentifier.home.rawValue) as? HomeViewController)!
         return true
     }
 }

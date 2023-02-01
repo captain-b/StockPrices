@@ -31,6 +31,7 @@ class CompanyInfoViewController: UIViewController {
         setLabels()
     }
     
+    // Sets the value of our labels.
     func setLabels() {
         let naString = "N/A"
         companyNameLabel.text = "Name: \(company.name!) (\(company.ticker!))"

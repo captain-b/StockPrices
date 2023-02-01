@@ -17,7 +17,9 @@ class HomeViewController: UIViewController {
     internal var companyToOpen = Company()
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set our delegates
         setDelegates()
+        // Triggers a chain of function, starting with the previously stored company stock data.
         findStoredCompanyData()
     }
     
