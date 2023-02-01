@@ -128,6 +128,10 @@ class FinnHub {
                  Notifies the delegate of an error that occurred on the WebSocket connection by calling the 'websocket(error:)' method on the delegate and passing in the error.
                  */
                 delegate?.websocket(error: error)
+            case .viabilityChanged(let val):
+                if !val {
+                    delegate?.disconnected(data: "Can't connect to the server, please try again.")
+                }
             default:
                 break
             }
