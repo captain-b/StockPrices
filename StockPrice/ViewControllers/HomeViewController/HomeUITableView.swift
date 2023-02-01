@@ -14,6 +14,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return tableViewCompanyData[industry]?.count ?? 0
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let sectionTitles = Array(tableViewCompanyData.keys)
+        let industry = sectionTitles[indexPath.section]
+        let company = tableViewCompanyData[industry]?[indexPath.row]
+        companyToOpen = company!
+        performSegue(withIdentifier: SegueIdentifier.details.rawValue, sender: self)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.stockData.rawValue) as! StockTableViewCell
         let sectionTitles = Array(tableViewCompanyData.keys)

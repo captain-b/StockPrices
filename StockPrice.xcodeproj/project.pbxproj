@@ -15,13 +15,21 @@
 		1DF15E5B29893C5B00CD1095 /* HomeUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E5A29893C5B00CD1095 /* HomeUITableView.swift */; };
 		1DF15E5E29893D2000CD1095 /* CompanyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E5D29893D2000CD1095 /* CompanyInfoViewController.swift */; };
 		1DF15E612989408700CD1095 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E602989408700CD1095 /* Structs.swift */; };
-		1DF15E642989416F00CD1095 /* StockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E632989416F00CD1095 /* StockTableViewCell.xib */; };
 		1DF15E67298941B900CD1095 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E66298941B900CD1095 /* StockTableViewCell.swift */; };
 		1DF15E6929894D5C00CD1095 /* UILabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E6829894D5C00CD1095 /* UILabels.swift */; };
 		1DF15E6B2989552800CD1095 /* UIImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E6A2989552800CD1095 /* UIImageViews.swift */; };
 		1DF15E6E298960FB00CD1095 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E6D298960FB00CD1095 /* API.swift */; };
 		1DF15E702989725400CD1095 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E6F2989725400CD1095 /* HomeAPI.swift */; };
 		1DF15E722989729900CD1095 /* HomeSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E712989729900CD1095 /* HomeSocket.swift */; };
+		1DF15E742989875C00CD1095 /* HomeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E732989875C00CD1095 /* HomeSegue.swift */; };
+		1DF15E852989997400CD1095 /* StockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E842989997400CD1095 /* StockTableViewCell.xib */; };
+		1DF15E8D298A2E5E00CD1095 /* AMZN.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E86298A2E5E00CD1095 /* AMZN.png */; };
+		1DF15E8E298A2E5E00CD1095 /* TSLA.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E87298A2E5E00CD1095 /* TSLA.png */; };
+		1DF15E8F298A2E5E00CD1095 /* KO.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E88298A2E5E00CD1095 /* KO.png */; };
+		1DF15E90298A2E5E00CD1095 /* GOOGL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E89298A2E5E00CD1095 /* GOOGL.png */; };
+		1DF15E91298A2E5E00CD1095 /* META.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E8A298A2E5E00CD1095 /* META.png */; };
+		1DF15E92298A2E5E00CD1095 /* AAPL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E8B298A2E5E00CD1095 /* AAPL.png */; };
+		1DF15E93298A2E5E00CD1095 /* company.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF15E8C298A2E5E00CD1095 /* company.png */; };
 		5F2755F73362B2DA78D648D2 /* Pods_StockPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF64917EBD6CB024F9B6A13F /* Pods_StockPrice.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,13 +44,21 @@
 		1DF15E5A29893C5B00CD1095 /* HomeUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITableView.swift; sourceTree = "<group>"; };
 		1DF15E5D29893D2000CD1095 /* CompanyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoViewController.swift; sourceTree = "<group>"; };
 		1DF15E602989408700CD1095 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
-		1DF15E632989416F00CD1095 /* StockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockTableViewCell.xib; sourceTree = "<group>"; };
 		1DF15E66298941B900CD1095 /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 		1DF15E6829894D5C00CD1095 /* UILabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabels.swift; sourceTree = "<group>"; };
 		1DF15E6A2989552800CD1095 /* UIImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViews.swift; sourceTree = "<group>"; };
 		1DF15E6D298960FB00CD1095 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1DF15E6F2989725400CD1095 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		1DF15E712989729900CD1095 /* HomeSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSocket.swift; sourceTree = "<group>"; };
+		1DF15E732989875C00CD1095 /* HomeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegue.swift; sourceTree = "<group>"; };
+		1DF15E842989997400CD1095 /* StockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockTableViewCell.xib; sourceTree = "<group>"; };
+		1DF15E86298A2E5E00CD1095 /* AMZN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AMZN.png; sourceTree = "<group>"; };
+		1DF15E87298A2E5E00CD1095 /* TSLA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TSLA.png; sourceTree = "<group>"; };
+		1DF15E88298A2E5E00CD1095 /* KO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KO.png; sourceTree = "<group>"; };
+		1DF15E89298A2E5E00CD1095 /* GOOGL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GOOGL.png; sourceTree = "<group>"; };
+		1DF15E8A298A2E5E00CD1095 /* META.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = META.png; sourceTree = "<group>"; };
+		1DF15E8B298A2E5E00CD1095 /* AAPL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AAPL.png; sourceTree = "<group>"; };
+		1DF15E8C298A2E5E00CD1095 /* company.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = company.png; sourceTree = "<group>"; };
 		6EB6F265E4D2FF6ADD914B86 /* Pods-StockPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPrice.debug.xcconfig"; path = "Target Support Files/Pods-StockPrice/Pods-StockPrice.debug.xcconfig"; sourceTree = "<group>"; };
 		D8F30536F773E49DB49E7701 /* Pods-StockPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPrice.release.xcconfig"; path = "Target Support Files/Pods-StockPrice/Pods-StockPrice.release.xcconfig"; sourceTree = "<group>"; };
 		EF64917EBD6CB024F9B6A13F /* Pods_StockPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +97,7 @@
 		1DF15E412989365600CD1095 /* StockPrice */ = {
 			isa = PBXGroup;
 			children = (
+				1DF15E75298987AA00CD1095 /* Supporting Files */,
 				1DF15E622989412600CD1095 /* Nibs */,
 				1DF15E5F2989407C00CD1095 /* Utils */,
 				1DF15E56298938B000CD1095 /* ViewControllers */,
@@ -109,6 +126,7 @@
 				1DF15E5A29893C5B00CD1095 /* HomeUITableView.swift */,
 				1DF15E6F2989725400CD1095 /* HomeAPI.swift */,
 				1DF15E712989729900CD1095 /* HomeSocket.swift */,
+				1DF15E732989875C00CD1095 /* HomeSegue.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -134,7 +152,7 @@
 		1DF15E622989412600CD1095 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
-				1DF15E632989416F00CD1095 /* StockTableViewCell.xib */,
+				1DF15E842989997400CD1095 /* StockTableViewCell.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -155,6 +173,20 @@
 				1DF15E6D298960FB00CD1095 /* API.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		1DF15E75298987AA00CD1095 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DF15E8B298A2E5E00CD1095 /* AAPL.png */,
+				1DF15E86298A2E5E00CD1095 /* AMZN.png */,
+				1DF15E8C298A2E5E00CD1095 /* company.png */,
+				1DF15E89298A2E5E00CD1095 /* GOOGL.png */,
+				1DF15E88298A2E5E00CD1095 /* KO.png */,
+				1DF15E8A298A2E5E00CD1095 /* META.png */,
+				1DF15E87298A2E5E00CD1095 /* TSLA.png */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D6E678D3532E490A28DA98A5 /* Pods */ = {
@@ -234,9 +266,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF15E8E298A2E5E00CD1095 /* TSLA.png in Resources */,
+				1DF15E93298A2E5E00CD1095 /* company.png in Resources */,
+				1DF15E8F298A2E5E00CD1095 /* KO.png in Resources */,
+				1DF15E91298A2E5E00CD1095 /* META.png in Resources */,
+				1DF15E852989997400CD1095 /* StockTableViewCell.xib in Resources */,
 				1DF15E4F2989365700CD1095 /* LaunchScreen.storyboard in Resources */,
 				1DF15E4C2989365700CD1095 /* Assets.xcassets in Resources */,
-				1DF15E642989416F00CD1095 /* StockTableViewCell.xib in Resources */,
+				1DF15E90298A2E5E00CD1095 /* GOOGL.png in Resources */,
+				1DF15E92298A2E5E00CD1095 /* AAPL.png in Resources */,
+				1DF15E8D298A2E5E00CD1095 /* AMZN.png in Resources */,
 				1DF15E4A2989365600CD1095 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF15E742989875C00CD1095 /* HomeSegue.swift in Sources */,
 				1DF15E5E29893D2000CD1095 /* CompanyInfoViewController.swift in Sources */,
 				1DF15E6929894D5C00CD1095 /* UILabels.swift in Sources */,
 				1DF15E432989365600CD1095 /* AppDelegate.swift in Sources */,

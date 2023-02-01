@@ -22,6 +22,10 @@ enum CellIdentifier: String {
     case stockData = "stock_cell"
 }
 
+enum SegueIdentifier: String {
+    case details = "details"
+}
+
 struct Company: Codable {
     var country: String?
     var currency: String?
