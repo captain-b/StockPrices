@@ -22,6 +22,7 @@ extension HomeViewController {
     }
     
     internal func retrieveCompanyData() {
+        tableViewCompanyData = [:]
         var companyArray = [Company]()
         self.companies.forEach { symbol in
             self.api.retrieveCompanyData(symbol: symbol) { result in
