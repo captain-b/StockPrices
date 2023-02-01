@@ -104,8 +104,8 @@ class FinnHub {
                     do {
                         let req =  try JSONSerialization.data(withJSONObject: ["type": "subscribe", "symbol": ticker.rawValue])
                         socket.write(string: String(data: req, encoding: .utf8) ?? "")
-                    } catch let myJSONError {
-                        print(myJSONError)
+                    } catch {
+                        delegate?.disconnected(data: error.localizedDescription)
                     }
                 }
             case .disconnected(let data, _):
@@ -121,7 +121,7 @@ class FinnHub {
                      */
                     delegate?.websocket(updated: getResponseData(res: res))
                 } catch {
-                    print(error)
+                    delegate?.disconnected(data: error.localizedDescription)
                 }
             case .error(let error):
                 /**

@@ -11,11 +11,12 @@ extension HomeViewController: FinnHubSocketDelegate {
     }
     
     func disconnected(data: String) {
-        
+        displayMessage(vc: self, message: data)
+        scanPrices()
     }
 
     func websocket(error: Error?) {
-
+        displayMessage(vc: self, message: error?.localizedDescription ?? "There was an unknown error with the socket conneciton")
     }
 
     func websocket(updated: LastPriceDataSubscription) {

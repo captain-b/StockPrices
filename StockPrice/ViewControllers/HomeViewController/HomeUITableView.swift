@@ -48,7 +48,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     let encoded = try JSONEncoder().encode(quote)
                     LocalDataStore.storeData(forKey: company!.ticker!, encoded)
                 } catch {
-                    print(error)
+                    displayMessage(vc: self, message: error.localizedDescription)
                 }
                 DispatchQueue.main.async {
                     cell.stockPriceLabel.text = "\(quote.currentPrice)"

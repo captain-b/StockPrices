@@ -15,7 +15,7 @@ extension HomeViewController {
                 let companyArray = try JSONDecoder().decode([Company].self, from: storedData as! Data) as [Company]
                 self.filterCompanies(_companies: companyArray)
             } catch {
-                print(error)
+                displayMessage(vc: self, message: error.localizedDescription)
             }
         }
         retrieveCompanyData()
@@ -35,12 +35,12 @@ extension HomeViewController {
                             // Store our company array data
                             LocalDataStore.storeData(forKey: .stockList, encodedArray)
                         } catch {
-                            print(error)
+                            displayMessage(vc: self, message: error.localizedDescription)
                         }
                         self.filterCompanies(_companies: companyArray)
                     }
                 case .failure(let error):
-                    print(error)
+                    displayMessage(vc: self, message: error.localizedDescription)
                 }
             }
         }
