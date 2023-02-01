@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegates()
-        findCompanyData()
+        findStoredCompanyData()
     }
     
     private func setDelegates() {

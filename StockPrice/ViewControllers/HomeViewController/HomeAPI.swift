@@ -8,7 +8,20 @@
 import Foundation
 
 extension HomeViewController {
-    internal func findCompanyData() {
+    internal func findStoredCompanyData() {
+        let storedData = LocalDataStore.retrieveLocalData(forKey: .stockList)
+        if (storedData.length != nil) {
+            do {
+                let companyArray = try JSONDecoder().decode([Company].self, from: storedData as! Data) as [Company]
+                self.filterCompanies(_companies: companyArray)
+            } catch {
+                print(error)
+            }
+        }
+        retrieveCompanyData()
+    }
+    
+    internal func retrieveCompanyData() {
         var companyArray = [Company]()
         self.companies.forEach { symbol in
             self.api.retrieveCompanyData(symbol: symbol) { result in
@@ -16,6 +29,13 @@ extension HomeViewController {
                 case .success(let company):
                     companyArray.append(company)
                     if companyArray.count == self.companies.count {
+                        do {
+                            let encodedArray = try JSONEncoder().encode(companyArray)
+                            // Store our company array data
+                            LocalDataStore.storeData(forKey: .stockList, encodedArray)
+                        } catch {
+                            print(error)
+                        }
                         self.filterCompanies(_companies: companyArray)
                     }
                 case .failure(let error):
