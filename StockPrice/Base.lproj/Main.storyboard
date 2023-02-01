@@ -58,7 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42C-jS-Bsv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42C-jS-Bsv">
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-tL-fWh" customClass="CompanyLogoImageView" customModule="StockPrice" customModuleProvider="target">
@@ -80,38 +80,83 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-Yi-1nd" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-Yi-1nd" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
                                         <rect key="frame" x="20" y="232" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFv-N4-taj">
-                                        <rect key="frame" x="40" y="273" width="313" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFv-N4-taj">
+                                        <rect key="frame" x="40" y="478" width="313" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Close"/>
                                         <connections>
                                             <action selector="closeButtonAction:" destination="d0k-Pw-EG5" eventType="touchUpInside" id="i7Z-pZ-y41"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiC-Yz-bJ0" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="273" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market cap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxZ-06-hfd" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="314" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUt-HZ-iBV" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="355" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp9-qx-NLf" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="396" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outsanding shares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2be-aL-Bwz" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="437" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="JiC-Yz-bJ0" firstAttribute="top" secondItem="b1O-Yi-1nd" secondAttribute="bottom" constant="20" id="02a-5q-dEu"/>
                                     <constraint firstItem="b1O-Yi-1nd" firstAttribute="trailing" secondItem="gIF-CH-PQ2" secondAttribute="trailing" id="2wH-BT-fTm"/>
+                                    <constraint firstItem="SxZ-06-hfd" firstAttribute="top" secondItem="JiC-Yz-bJ0" secondAttribute="bottom" constant="20" id="37m-FU-Rqj"/>
                                     <constraint firstItem="GxN-AL-zbx" firstAttribute="top" secondItem="HCh-tL-fWh" secondAttribute="bottom" constant="30" id="4DM-2I-KGU"/>
-                                    <constraint firstItem="TFv-N4-taj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b1O-Yi-1nd" secondAttribute="bottom" priority="750" constant="20" id="8Xp-tl-tPM"/>
+                                    <constraint firstItem="uUt-HZ-iBV" firstAttribute="leading" secondItem="SxZ-06-hfd" secondAttribute="leading" id="ANs-Oc-gyK"/>
+                                    <constraint firstItem="SxZ-06-hfd" firstAttribute="trailing" secondItem="JiC-Yz-bJ0" secondAttribute="trailing" id="Ae6-58-i7u"/>
+                                    <constraint firstItem="2be-aL-Bwz" firstAttribute="leading" secondItem="Dp9-qx-NLf" secondAttribute="leading" id="Deg-Iu-mfR"/>
                                     <constraint firstItem="gIF-CH-PQ2" firstAttribute="top" secondItem="GxN-AL-zbx" secondAttribute="bottom" constant="20" id="GcZ-0F-8ui"/>
                                     <constraint firstItem="gIF-CH-PQ2" firstAttribute="leading" secondItem="GxN-AL-zbx" secondAttribute="leading" id="KBe-14-Nsd"/>
                                     <constraint firstItem="TFv-N4-taj" firstAttribute="leading" secondItem="42C-jS-Bsv" secondAttribute="leading" constant="40" id="LL8-7j-XCO"/>
+                                    <constraint firstItem="Dp9-qx-NLf" firstAttribute="trailing" secondItem="uUt-HZ-iBV" secondAttribute="trailing" id="LNn-yi-9y9"/>
                                     <constraint firstItem="GxN-AL-zbx" firstAttribute="leading" secondItem="42C-jS-Bsv" secondAttribute="leading" constant="20" id="NgC-fs-ABK"/>
                                     <constraint firstAttribute="trailing" secondItem="GxN-AL-zbx" secondAttribute="trailing" constant="20" id="SJm-BG-KlZ"/>
                                     <constraint firstAttribute="trailing" secondItem="TFv-N4-taj" secondAttribute="trailing" constant="40" id="SPo-sv-PWd"/>
+                                    <constraint firstItem="JiC-Yz-bJ0" firstAttribute="trailing" secondItem="b1O-Yi-1nd" secondAttribute="trailing" id="TW6-aJ-hze"/>
                                     <constraint firstItem="b1O-Yi-1nd" firstAttribute="top" secondItem="gIF-CH-PQ2" secondAttribute="bottom" constant="20" id="Ubx-kB-p7E"/>
                                     <constraint firstItem="HCh-tL-fWh" firstAttribute="top" secondItem="42C-jS-Bsv" secondAttribute="top" constant="20" id="W4P-SH-esS"/>
+                                    <constraint firstItem="Dp9-qx-NLf" firstAttribute="top" secondItem="uUt-HZ-iBV" secondAttribute="bottom" constant="20" id="Wp7-Xr-3JA"/>
                                     <constraint firstItem="HCh-tL-fWh" firstAttribute="centerX" secondItem="42C-jS-Bsv" secondAttribute="centerX" id="YEQ-tQ-WuR"/>
+                                    <constraint firstItem="uUt-HZ-iBV" firstAttribute="trailing" secondItem="SxZ-06-hfd" secondAttribute="trailing" id="YUT-lX-5Q3"/>
                                     <constraint firstItem="TFv-N4-taj" firstAttribute="centerX" secondItem="42C-jS-Bsv" secondAttribute="centerX" id="dE2-QO-olC"/>
                                     <constraint firstItem="gIF-CH-PQ2" firstAttribute="trailing" secondItem="GxN-AL-zbx" secondAttribute="trailing" id="gRE-xg-o1M"/>
                                     <constraint firstItem="b1O-Yi-1nd" firstAttribute="leading" secondItem="gIF-CH-PQ2" secondAttribute="leading" id="gZz-79-dAO"/>
+                                    <constraint firstItem="TFv-N4-taj" firstAttribute="top" secondItem="2be-aL-Bwz" secondAttribute="bottom" priority="750" constant="20" id="jxS-Fv-i6W"/>
+                                    <constraint firstItem="uUt-HZ-iBV" firstAttribute="top" secondItem="SxZ-06-hfd" secondAttribute="bottom" constant="20" id="kNG-gv-WUv"/>
+                                    <constraint firstItem="SxZ-06-hfd" firstAttribute="leading" secondItem="JiC-Yz-bJ0" secondAttribute="leading" id="lwZ-Hf-DWv"/>
+                                    <constraint firstItem="2be-aL-Bwz" firstAttribute="trailing" secondItem="Dp9-qx-NLf" secondAttribute="trailing" id="oIH-0w-Mvx"/>
                                     <constraint firstAttribute="bottom" secondItem="TFv-N4-taj" secondAttribute="bottom" constant="10" id="rin-OA-NAp"/>
+                                    <constraint firstItem="JiC-Yz-bJ0" firstAttribute="leading" secondItem="b1O-Yi-1nd" secondAttribute="leading" id="ykY-gT-w55"/>
+                                    <constraint firstItem="2be-aL-Bwz" firstAttribute="top" secondItem="Dp9-qx-NLf" secondAttribute="bottom" constant="20" id="zLh-Oh-18Y"/>
+                                    <constraint firstItem="Dp9-qx-NLf" firstAttribute="leading" secondItem="uUt-HZ-iBV" secondAttribute="leading" id="zZU-0M-sIq"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -125,10 +170,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="companyCountryLabel" destination="b1O-Yi-1nd" id="OH8-6C-GvA"/>
+                        <outlet property="companyExchangeLabel" destination="JiC-Yz-bJ0" id="KLH-BF-rLh"/>
                         <outlet property="companyIndustryLabel" destination="gIF-CH-PQ2" id="Gbk-3B-bwT"/>
                         <outlet property="companyLogoImageView" destination="HCh-tL-fWh" id="eYs-fq-hJp"/>
+                        <outlet property="companyMarketCapLabel" destination="SxZ-06-hfd" id="WGW-bQ-j0t"/>
                         <outlet property="companyNameLabel" destination="GxN-AL-zbx" id="nmi-58-nDA"/>
-                        <outlet property="companyPriceLabel" destination="b1O-Yi-1nd" id="LOK-nb-BzY"/>
+                        <outlet property="companyOutsandingSharesLabel" destination="2be-aL-Bwz" id="rJH-X8-MHz"/>
+                        <outlet property="companyPhoneLabel" destination="uUt-HZ-iBV" id="51U-qQ-PsP"/>
+                        <outlet property="companyWebsiteLabel" destination="Dp9-qx-NLf" id="nBI-Ic-Nwd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceo-0d-VIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
