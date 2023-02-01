@@ -8,8 +8,12 @@
 import UIKit
 
 class CompanyInfoViewController: UIViewController {
+    internal let naString = "N/A"
     var company = Company()
+    let socket = FinnHub.Socket()
+    let api = FinnHub.API()
     
+    @IBOutlet weak var stockPriceLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyCountryLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyIndustryLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyNameLabel: GrayDescriptionLabel!
@@ -29,11 +33,11 @@ class CompanyInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLabels()
+        displayStockPrice()
     }
     
-    // Sets the value of our labels.
+    /// Sets the value of our labels.
     func setLabels() {
-        let naString = "N/A"
         companyNameLabel.text = "Name: \(company.name!) (\(company.ticker!))"
         companyIndustryLabel.text = "Industry: \(company.finnhubIndustry!)"
         companyLogoImageView.image = getStockImage(ticker: company.ticker!)
