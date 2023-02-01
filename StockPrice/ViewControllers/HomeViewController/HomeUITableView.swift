@@ -32,9 +32,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.stockTickerLabel.text = company?.ticker
         cell.stockCompanyNameLabel.text = company?.name
         cell.stockImage.image = getStockImage(ticker: company!.ticker!)
+        
+        // Retrieve our stored data
+        let quote = LocalDataStore.retrieveLocalData(forKey: company!.ticker!) as? Quote
+        if quote != nil {
+            DispatchQueue.main.async {
+                cell.stockPriceLabel.text = "\(quote!.currentPrice)"
+            }
+        }
+        
         api.getQuote(symbol: company!.ticker!) { result in
             switch result {
                 case .success(let quote):
+                do {
+                    let encoded = try JSONEncoder().encode(quote)
+                    LocalDataStore.storeData(forKey: company!.ticker!, encoded)
+                } catch {
+                    print(error)
+                }
                 DispatchQueue.main.async {
                     cell.stockPriceLabel.text = "\(quote.currentPrice)"
                 }
