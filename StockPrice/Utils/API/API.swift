@@ -161,6 +161,25 @@ class FinnHub {
     }
 }
 
+class LocalDataStore {
+    enum StoredDataKey: String {
+        case stockList = "stockList"
+    }
+    
+    static func storeData(forKey: StoredDataKey, _ data: Any) -> Void {
+        UserDefaults.standard.set(data, forKey: forKey.rawValue)
+    }
+
+    static func removeStoredData(forKey: StoredDataKey) {
+        UserDefaults.standard.removeObject(forKey: forKey.rawValue)
+    }
+    
+    static func retrieveLocalData(forKey: StoredDataKey) -> AnyObject {
+        return UserDefaults.standard.value(forKey: forKey.rawValue) as AnyObject
+    }
+}
+
+
 public func getStockImage(ticker: String) -> UIImage {
     return UIImage(named: ticker) ?? UIImage(named: "company")!
 }
