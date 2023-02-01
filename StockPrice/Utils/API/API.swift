@@ -167,7 +167,11 @@ class LocalDataStore {
     }
     
     static func storeData(forKey: StoredDataKey, _ data: Any) -> Void {
-        UserDefaults.standard.set(data, forKey: forKey.rawValue)
+        storeData(forKey: forKey.rawValue, data)
+    }
+    
+    static func storeData(forKey: String, _ data: Any) -> Void {
+        UserDefaults.standard.set(data, forKey: forKey)
     }
 
     static func removeStoredData(forKey: StoredDataKey) {
@@ -175,7 +179,11 @@ class LocalDataStore {
     }
     
     static func retrieveLocalData(forKey: StoredDataKey) -> AnyObject {
-        return UserDefaults.standard.value(forKey: forKey.rawValue) as AnyObject
+        return retrieveLocalData(forKey: forKey.rawValue) as AnyObject
+    }
+    
+    static func retrieveLocalData(forKey: String) -> AnyObject {
+        return UserDefaults.standard.value(forKey: forKey) as AnyObject
     }
 }
 
