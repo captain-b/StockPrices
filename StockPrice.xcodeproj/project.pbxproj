@@ -33,6 +33,7 @@
 		1DF15E95298A38F100CD1095 /* UIButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E94298A38F100CD1095 /* UIButtons.swift */; };
 		1DF15E9A298A588500CD1095 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E99298A588500CD1095 /* Alerts.swift */; };
 		1DF15E9F298A911900CD1095 /* CompanyInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15E9E298A911900CD1095 /* CompanyInfoAPI.swift */; };
+		1DF15EB02990FBF300CD1095 /* WKWebViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF15EAF2990FBF300CD1095 /* WKWebViews.swift */; };
 		5F2755F73362B2DA78D648D2 /* Pods_StockPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF64917EBD6CB024F9B6A13F /* Pods_StockPrice.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		1DF15E94298A38F100CD1095 /* UIButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtons.swift; sourceTree = "<group>"; };
 		1DF15E99298A588500CD1095 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		1DF15E9E298A911900CD1095 /* CompanyInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoAPI.swift; sourceTree = "<group>"; };
+		1DF15EAF2990FBF300CD1095 /* WKWebViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViews.swift; sourceTree = "<group>"; };
 		6EB6F265E4D2FF6ADD914B86 /* Pods-StockPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPrice.debug.xcconfig"; path = "Target Support Files/Pods-StockPrice/Pods-StockPrice.debug.xcconfig"; sourceTree = "<group>"; };
 		D8F30536F773E49DB49E7701 /* Pods-StockPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPrice.release.xcconfig"; path = "Target Support Files/Pods-StockPrice/Pods-StockPrice.release.xcconfig"; sourceTree = "<group>"; };
 		EF64917EBD6CB024F9B6A13F /* Pods_StockPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 				1DF15E6829894D5C00CD1095 /* UILabels.swift */,
 				1DF15E6A2989552800CD1095 /* UIImageViews.swift */,
 				1DF15E94298A38F100CD1095 /* UIButtons.swift */,
+				1DF15EAF2990FBF300CD1095 /* WKWebViews.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				1DF15E59298938D700CD1095 /* HomeViewController.swift in Sources */,
 				1DF15E67298941B900CD1095 /* StockTableViewCell.swift in Sources */,
 				1DF15E6E298960FB00CD1095 /* API.swift in Sources */,
+				1DF15EB02990FBF300CD1095 /* WKWebViews.swift in Sources */,
 				1DF15E95298A38F100CD1095 /* UIButtons.swift in Sources */,
 				1DF15E5B29893C5B00CD1095 /* HomeUITableView.swift in Sources */,
 			);
