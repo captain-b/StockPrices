@@ -37,13 +37,27 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         // Populate the data to our cell labels and images.
         cell.stockTickerLabel.text = company?.ticker
         cell.stockCompanyNameLabel.text = company?.name
-        cell.stockImage.image = getStockImage(ticker: company!.ticker!)
+        
+        // Set a temporary image placeholder for our company logo
+        let companyStockImagePlaceholder = UIImageView()
+        companyStockImagePlaceholder.frame = cell.stockImageView.bounds
+        cell.stockImageView.addSubview(companyStockImagePlaceholder)
+        companyStockImagePlaceholder.image = UIImage(named: "company")
+        
+        // Fetch the image from the URL and remove the placeholder
+        if ((company != nil) && ((company?.logo) != nil)) {
+            companyStockImagePlaceholder.removeFromSuperview()
+            let companyStockImage = SVGImageView()
+            companyStockImage.frame = cell.stockImageView.bounds
+            cell.stockImageView.addSubview(companyStockImage)
+            companyStockImage.setImage(withUrl: company!.logo!)
+        }
         
         // Retrieve our stored data
         let quote = LocalDataStore.retrieveLocalData(forKey: company!.ticker!) as? Quote
         if quote != nil {
             DispatchQueue.main.async {
-                cell.stockPriceLabel.text = "\(quote!.currentPrice)"
+                cell.stockPriceLabel.text = "\(company?.currency ?? "") \(quote!.currentPrice)"
             }
         }
         
