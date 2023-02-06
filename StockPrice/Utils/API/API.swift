@@ -72,22 +72,34 @@ class FinnHub {
         
         // Constructs the request and sends it to the API.
         fileprivate func request(endpoint: String, completion: @escaping (Result<Data, Error>) -> Void) {
+            var numberOfAttempts = 0
             let endpoint = url + endpoint
             guard let url = URL(string: endpoint) else {
                 completion(.failure(URLError(.badURL)))
                 return
             }
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    completion(.failure(error))
-                    return
-                }
-                guard let data = data else {
-                    completion(.failure(NSError(domain: "data is empty", code: 0, userInfo: nil)))
-                    return
-                }
-                completion(.success(data))
-            }.resume()
+            
+            func req() {
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if let error = error {
+                        if 3 > numberOfAttempts {
+                            // Try sending the request one more time
+                            numberOfAttempts += 1
+                            req()
+                            return
+                        }
+                        // We made the request 3 times with no success, we return an error.
+                        completion(.failure(error))
+                        return
+                    }
+                    guard let data = data else {
+                        completion(.failure(NSError(domain: "data is empty", code: 0, userInfo: nil)))
+                        return
+                    }
+                    completion(.success(data))
+                }.resume()
+            }
+            req()
         }
     }
     
