@@ -8,7 +8,8 @@
 import UIKit
 
 class StockTableViewCell: UITableViewCell {
-    @IBOutlet weak var stockImage: CompanyLogoImageView!
+    
+    @IBOutlet weak var stockImageView: UIView!
     @IBOutlet weak var stockPriceLabel: BlackBoldLabel!
     @IBOutlet weak var stockCompanyNameLabel: GrayDescriptionLabel!
     @IBOutlet weak var stockTickerLabel: BlackBoldLabel!
@@ -16,6 +17,8 @@ class StockTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        stockImageView.layer.cornerRadius = stockImageView.frame.height / 2
+        stockImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
