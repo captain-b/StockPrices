@@ -13,16 +13,23 @@ extension CompanyInfoViewController {
         api.getQuote(symbol: Ticker(rawValue: company.ticker!)!.rawValue) { result in
             switch result {
             case .success(let quote):
-                DispatchQueue.main.async {
-                    self.stockPriceLabel.text = "Stock price: $\(quote.currentPrice)"
-                }
+                self.displayQuote(quote)
             case .failure(let error):
-                displayMessage(vc: self, message: "There wan an error retrieving the stoc price.\n\(error.localizedDescription)")
-                DispatchQueue.main.async {
-                    self.stockPriceLabel.text = self.naString
-                }
-                
+                self.displayError(error)
             }
+        }
+    }
+    
+    private func displayQuote(_ quote: Quote) {
+        DispatchQueue.main.async {
+            self.stockPriceLabel.text = "Stock price: $\(quote.currentPrice)"
+        }
+    }
+    
+    private func displayError(_ error: Error) {
+        displayMessage(vc: self, message: "There wan an error retrieving the stoc price.\n\(error.localizedDescription)")
+        DispatchQueue.main.async {
+            self.stockPriceLabel.text = self.naString
         }
     }
 }
