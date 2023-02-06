@@ -54,12 +54,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         // Retrieve our stored data
-        let quote = LocalDataStore.retrieveLocalData(forKey: company!.ticker!) as? Quote
-        if quote != nil {
-            DispatchQueue.main.async {
-                cell.stockPriceLabel.text = "\(company?.currency ?? "") \(quote!.currentPrice)"
+        let storedCompanyData = LocalDataStore.retrieveLocalData(forKey: company!.ticker!) as! Data
+        do {
+            if !storedCompanyData.isEmpty { // If the data is not empty...
+                // Decode the quote data and display it to the user.
+                let quote = try JSONDecoder().decode(Quote.self, from: storedCompanyData)
+                DispatchQueue.main.async {
+                    cell.stockPriceLabel.text = "\(company?.currency ?? "$") \(quote.currentPrice)"
+                }
             }
+        } catch {
+            displayMessage(vc: self, message: "Failed to retrieve previously stored quote. Attempting to fetch the price now.")
         }
+        
+        
         
         // Get company stock quotes from our API.
         api.getQuote(symbol: company!.ticker!) { result in
@@ -98,7 +106,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let sectionTitles = Array(tableViewCompanyData.keys)
         let indexPath = IndexPath(row: row, section: sectionTitles.firstIndex(of: section)!)
         if let cell = stocksTableView.cellForRow(at: indexPath) as? StockTableViewCell {
-            let previousPrice = Double((cell.stockPriceLabel.text!).replacingOccurrences(of: "$", with: ""))!
+            let previousPrice = Double((cell.stockPriceLabel.text!).replacingOccurrences(of: "$", with: "")) ?? 0
             if  previousPrice > priceData.lastPrice {
                 cell.stockPriceLabel.textColor = UIColor(red: 255/255, green: 45/255, blue: 85/255, alpha: 1)
             }
