@@ -54,17 +54,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         // Retrieve our stored data
-        let storedCompanyData = LocalDataStore.retrieveLocalData(forKey: company!.ticker!) as! Data
-        do {
-            if !storedCompanyData.isEmpty { // If the data is not empty...
-                // Decode the quote data and display it to the user.
-                let quote = try JSONDecoder().decode(Quote.self, from: storedCompanyData)
-                DispatchQueue.main.async {
-                    cell.stockPriceLabel.text = "$\(quote.currentPrice)"
+        let storedCompanyData = LocalDataStore.retrieveLocalData(forKey: company!.ticker!) as? Data
+        if storedCompanyData != nil {
+            do {
+                if !storedCompanyData!.isEmpty { // If the data is not empty...
+                    // Decode the quote data and display it to the user.
+                    let quote = try JSONDecoder().decode(Quote.self, from: storedCompanyData!)
+                    DispatchQueue.main.async {
+                        cell.stockPriceLabel.text = "$\(quote.currentPrice)"
+                    }
                 }
+            } catch {
+                displayMessage(vc: self, message: "Failed to retrieve previously stored quote. Attempting to fetch the price now.")
             }
-        } catch {
-            displayMessage(vc: self, message: "Failed to retrieve previously stored quote. Attempting to fetch the price now.")
         }
         
         
