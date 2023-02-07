@@ -61,33 +61,26 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42C-jS-Bsv">
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-tL-fWh" customClass="CompanyLogoImageView" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="146.66666666666666" y="20" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="tww-0E-6Qf"/>
-                                            <constraint firstAttribute="height" constant="100" id="xsw-7O-Cj9"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxN-AL-zbx" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="150" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="140" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIF-CH-PQ2" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="232" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="222" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1O-Yi-1nd" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="273" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="263" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFv-N4-taj" customClass="CloseButton" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="519" width="313" height="35"/>
+                                        <rect key="frame" x="40" y="509" width="313" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Close"/>
                                         <connections>
@@ -95,49 +88,57 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiC-Yz-bJ0" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="314" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="304" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market cap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxZ-06-hfd" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="355" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="345" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUt-HZ-iBV" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="396" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="386" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp9-qx-NLf" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="437" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="427" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outsanding shares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2be-aL-Bwz" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="478" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="468" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: $0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEY-F5-Loh" customClass="GrayDescriptionLabel" customModule="StockPrice" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="191" width="353" height="21"/>
+                                        <rect key="frame" x="20" y="181" width="353" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hx-Ua-8TW">
+                                        <rect key="frame" x="146.66666666666666" y="20" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ecr-Np-uOd"/>
+                                            <constraint firstAttribute="width" constant="100" id="n83-IW-vSl"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="JiC-Yz-bJ0" firstAttribute="top" secondItem="b1O-Yi-1nd" secondAttribute="bottom" constant="20" id="02a-5q-dEu"/>
                                     <constraint firstItem="b1O-Yi-1nd" firstAttribute="trailing" secondItem="gIF-CH-PQ2" secondAttribute="trailing" id="2wH-BT-fTm"/>
                                     <constraint firstItem="SxZ-06-hfd" firstAttribute="top" secondItem="JiC-Yz-bJ0" secondAttribute="bottom" constant="20" id="37m-FU-Rqj"/>
                                     <constraint firstItem="oEY-F5-Loh" firstAttribute="leading" secondItem="GxN-AL-zbx" secondAttribute="leading" id="3fT-rZ-Axv"/>
-                                    <constraint firstItem="GxN-AL-zbx" firstAttribute="top" secondItem="HCh-tL-fWh" secondAttribute="bottom" constant="30" id="4DM-2I-KGU"/>
                                     <constraint firstItem="oEY-F5-Loh" firstAttribute="trailing" secondItem="GxN-AL-zbx" secondAttribute="trailing" id="7yV-Kl-iYv"/>
+                                    <constraint firstItem="GxN-AL-zbx" firstAttribute="top" secondItem="9Hx-Ua-8TW" secondAttribute="bottom" constant="20" id="9Sb-bC-6J5"/>
                                     <constraint firstItem="uUt-HZ-iBV" firstAttribute="leading" secondItem="SxZ-06-hfd" secondAttribute="leading" id="ANs-Oc-gyK"/>
                                     <constraint firstItem="SxZ-06-hfd" firstAttribute="trailing" secondItem="JiC-Yz-bJ0" secondAttribute="trailing" id="Ae6-58-i7u"/>
                                     <constraint firstItem="2be-aL-Bwz" firstAttribute="leading" secondItem="Dp9-qx-NLf" secondAttribute="leading" id="Deg-Iu-mfR"/>
@@ -149,11 +150,11 @@
                                     <constraint firstAttribute="trailing" secondItem="TFv-N4-taj" secondAttribute="trailing" constant="40" id="SPo-sv-PWd"/>
                                     <constraint firstItem="JiC-Yz-bJ0" firstAttribute="trailing" secondItem="b1O-Yi-1nd" secondAttribute="trailing" id="TW6-aJ-hze"/>
                                     <constraint firstItem="b1O-Yi-1nd" firstAttribute="top" secondItem="gIF-CH-PQ2" secondAttribute="bottom" constant="20" id="Ubx-kB-p7E"/>
-                                    <constraint firstItem="HCh-tL-fWh" firstAttribute="top" secondItem="42C-jS-Bsv" secondAttribute="top" constant="20" id="W4P-SH-esS"/>
                                     <constraint firstItem="Dp9-qx-NLf" firstAttribute="top" secondItem="uUt-HZ-iBV" secondAttribute="bottom" constant="20" id="Wp7-Xr-3JA"/>
-                                    <constraint firstItem="HCh-tL-fWh" firstAttribute="centerX" secondItem="42C-jS-Bsv" secondAttribute="centerX" id="YEQ-tQ-WuR"/>
                                     <constraint firstItem="uUt-HZ-iBV" firstAttribute="trailing" secondItem="SxZ-06-hfd" secondAttribute="trailing" id="YUT-lX-5Q3"/>
+                                    <constraint firstItem="9Hx-Ua-8TW" firstAttribute="top" secondItem="42C-jS-Bsv" secondAttribute="top" constant="20" id="Zyv-YU-o5y"/>
                                     <constraint firstItem="TFv-N4-taj" firstAttribute="centerX" secondItem="42C-jS-Bsv" secondAttribute="centerX" id="dE2-QO-olC"/>
+                                    <constraint firstItem="9Hx-Ua-8TW" firstAttribute="centerX" secondItem="42C-jS-Bsv" secondAttribute="centerX" id="fi4-k9-IDp"/>
                                     <constraint firstItem="gIF-CH-PQ2" firstAttribute="top" secondItem="oEY-F5-Loh" secondAttribute="bottom" constant="20" id="fjB-9k-hqU"/>
                                     <constraint firstItem="gIF-CH-PQ2" firstAttribute="trailing" secondItem="GxN-AL-zbx" secondAttribute="trailing" id="gRE-xg-o1M"/>
                                     <constraint firstItem="b1O-Yi-1nd" firstAttribute="leading" secondItem="gIF-CH-PQ2" secondAttribute="leading" id="gZz-79-dAO"/>
@@ -182,7 +183,7 @@
                         <outlet property="companyCountryLabel" destination="b1O-Yi-1nd" id="OH8-6C-GvA"/>
                         <outlet property="companyExchangeLabel" destination="JiC-Yz-bJ0" id="KLH-BF-rLh"/>
                         <outlet property="companyIndustryLabel" destination="gIF-CH-PQ2" id="Gbk-3B-bwT"/>
-                        <outlet property="companyLogoImageView" destination="HCh-tL-fWh" id="eYs-fq-hJp"/>
+                        <outlet property="companyLogoView" destination="9Hx-Ua-8TW" id="Lnh-BS-RYH"/>
                         <outlet property="companyMarketCapLabel" destination="SxZ-06-hfd" id="WGW-bQ-j0t"/>
                         <outlet property="companyNameLabel" destination="GxN-AL-zbx" id="nmi-58-nDA"/>
                         <outlet property="companyOutsandingSharesLabel" destination="2be-aL-Bwz" id="rJH-X8-MHz"/>

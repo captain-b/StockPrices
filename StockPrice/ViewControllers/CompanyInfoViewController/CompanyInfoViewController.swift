@@ -17,7 +17,7 @@ class CompanyInfoViewController: UIViewController {
     @IBOutlet weak var companyCountryLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyIndustryLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyNameLabel: GrayDescriptionLabel!
-    @IBOutlet weak var companyLogoImageView: CompanyLogoImageView!
+    @IBOutlet weak var companyLogoView: UIView!
     @IBOutlet weak var companyExchangeLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyMarketCapLabel: GrayDescriptionLabel!
     @IBOutlet weak var companyOutsandingSharesLabel: GrayDescriptionLabel!
@@ -38,9 +38,20 @@ class CompanyInfoViewController: UIViewController {
     
     /// Sets the value of our labels.
     func setLabels() {
+        // Create a placeholder for our company info
+        let companyLogoPlaceholder = UIImageView(image: UIImage(named: "company"))
+        companyLogoPlaceholder.frame = companyLogoView.bounds
+        companyLogoView.addSubview(companyLogoPlaceholder)
+        // Fetch the actual logo and replace it with the placeholder.
+        if (company.logo != nil) {
+            let companySvgLogo = SVGImageView(frame: companyLogoView.bounds)
+            companySvgLogo.setImage(withUrl: company.logo!)
+            companyLogoView.addSubview(companySvgLogo)
+            companyLogoPlaceholder.removeFromSuperview()
+        }
+        // Set the rest of our labels
         companyNameLabel.text = "Name: \(company.name!) (\(company.ticker!))"
         companyIndustryLabel.text = "Industry: \(company.finnhubIndustry!)"
-        companyLogoImageView.image = getStockImage(ticker: company.ticker!)
         companyExchangeLabel.text = "Exchange: \(company.exchange ?? naString)"
         companyMarketCapLabel.text = "Market cap: \(company.marketCapitalization ?? 0)"
         companyPhoneLabel.text = "Phone: \(company.phone ?? naString)"

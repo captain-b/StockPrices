@@ -20,6 +20,7 @@ extension HomeViewController: FinnHubSocketDelegate {
     /// Displays a popup error message in case of a websocket error.
     func websocket(error: Error?) {
         displayMessage(vc: self, message: error?.localizedDescription ?? "There was an unknown error with the socket conneciton")
+        scanPrices()
     }
 
     /// Handles the socket subscription events. This function loops through the response array and updates the quotes for each company table view cell.

@@ -6,8 +6,25 @@
 //
 
 import Foundation
+import UIKit
 
-extension HomeViewController {
+extension HomeViewController: FinnHubAPIDelegate {
+    func isLoading(_ loading: Bool) {
+        if loading {
+            DispatchQueue.main.async {
+                self.activityIndicator.center = self.view.center
+                self.activityIndicator.hidesWhenStopped = true
+                self.activityIndicator.startAnimating()
+                self.view.addSubview(self.activityIndicator)
+            }
+            return 
+        }
+        
+        DispatchQueue.main.async {
+            self.activityIndicator.removeFromSuperview()
+        }
+    }
+    
     /// Finds the stored company stock data from previous sessions, filters them by their industry category and then calls for real time company info.
     internal func findStoredCompanyData() {
         let storedData = LocalDataStore.retrieveLocalData(forKey: .stockList)

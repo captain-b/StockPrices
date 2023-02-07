@@ -7,5 +7,4 @@ target 'StockPrice' do
 
   # Pods for StockPrices
   pod 'Starscream'
-  
 end
