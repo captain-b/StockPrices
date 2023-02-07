@@ -60,7 +60,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 // Decode the quote data and display it to the user.
                 let quote = try JSONDecoder().decode(Quote.self, from: storedCompanyData)
                 DispatchQueue.main.async {
-                    cell.stockPriceLabel.text = "\(company?.currency ?? "$") \(quote.currentPrice)"
+                    cell.stockPriceLabel.text = "$\(quote.currentPrice)"
                 }
             }
         } catch {

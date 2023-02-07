@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var stocksTableView: UITableView!
+    internal let activityIndicator = UIActivityIndicatorView(style: .gray)
     internal let companies: [Ticker] = [.Google, .Apple, .Meta, .Tesla, .Amazon, .Coke]
     internal var companyData = [Company]()
     internal var tableViewCompanyData: [String: [Company]] = [:]
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setDelegates() {
+        api.delegate = self
         stocksTableView.delegate = self
         stocksTableView.dataSource = self
         stocksTableView.register(UINib(nibName: NibIdentifier.stockTableViewCell.rawValue, bundle: nil), forCellReuseIdentifier: CellIdentifier.stockData.rawValue)

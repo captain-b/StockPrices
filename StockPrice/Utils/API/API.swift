@@ -12,6 +12,7 @@ import Starscream
 class FinnHub {
     // Makes API requests to the server.
     class API {
+        weak var delegate: FinnHubAPIDelegate?
         // API token for accessing FinnHub API
         fileprivate let token = "cf93lraad3i9ljn7d4c0cf93lraad3i9ljn7d4cg"
         // Base URL for FinnHub API
@@ -72,9 +73,11 @@ class FinnHub {
         
         // Constructs the request and sends it to the API.
         fileprivate func request(endpoint: String, completion: @escaping (Result<Data, Error>) -> Void) {
+            delegate?.isLoading(true)
             var numberOfAttempts = 0
             let endpoint = url + endpoint
             guard let url = URL(string: endpoint) else {
+                delegate?.isLoading(false)
                 completion(.failure(URLError(.badURL)))
                 return
             }
@@ -89,9 +92,11 @@ class FinnHub {
                             return
                         }
                         // We made the request 3 times with no success, we return an error.
+                        self.delegate?.isLoading(false)
                         completion(.failure(error))
                         return
                     }
+                    self.delegate?.isLoading(false)
                     guard let data = data else {
                         completion(.failure(NSError(domain: "data is empty", code: 0, userInfo: nil)))
                         return
@@ -224,4 +229,8 @@ protocol FinnHubSocketDelegate: AnyObject {
     func disconnected(data: String)
     func websocket(error: Error?)
     func websocket(updated: LastPriceDataSubscription)
+}
+
+protocol FinnHubAPIDelegate: AnyObject {
+    func isLoading(_ loading: Bool)
 }
